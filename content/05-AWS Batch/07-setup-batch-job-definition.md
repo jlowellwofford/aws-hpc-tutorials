@@ -16,7 +16,7 @@ In this step, you will set up a template for your jobs, known as a **Job Definit
 5. Select **EC2** as the platform.
 6. Choose None for **Execution role**.
 ![AWS Batch](/images/aws-batch/create-job-def-2.png)
-7. Under **Job configuration**, for **Image**, enter the **repositoryUri** generated when you created the **stress-ng** ECR repository. If you do not know the URI, you can use the following command in your terminal to get it.
+7. In the **Job configuration** area, for **Image**, enter the **repositoryUri** generated when you created the **stress-ng** ECR repository. If you do not know the URI, you can use the following command in your terminal to get it.
    ```bash
    aws ecr describe-repositories --repository-names stress-ng --output text --query 'repositories[0].[repositoryUri]'
    ```
@@ -26,7 +26,7 @@ In this step, you will set up a template for your jobs, known as a **Job Definit
 10. For **Memory (MiB)** type **1024**.
 11. Leave the value as blank for **Number of GPUs** field.
 ![AWS Batch](/images/aws-batch/create-job-def-4.png)
-12. Under **Retry Strategies**, for **Job attempts**, type **3**. This option specifies the number of attempts before declaring a job as failed.
+12. In the **Retry Strategies** area, for **Job attempts**, type **3**. This option specifies the number of attempts before declaring a job as failed.
 ![AWS Batch](/images/aws-batch/create-job-def-5.png)
 13. Scroll to the bottom of the page and Choose **Create**.
 14. Once the Job definition is ready, it will be visible under **Job definitions** grid. Make sure *Status* is **ACTIVE**.

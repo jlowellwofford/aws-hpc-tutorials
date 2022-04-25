@@ -15,7 +15,7 @@ tags = ["tutorial", "install", "AWS", "batch", "Docker"]
 6. Select **stress-ng-queue** as the **Job queue**.
 7. Enter **120** in **Execution timeout**. Here you are overriding the previous value of 180 seconds you provided in the Job Definition.
 ![AWS Batch](/images/aws-batch/run-job-2.png)
-8. Under **Job configuration** select the **Environment variables configuration** toggle.
+8. In the **Job configuration** area, turn on **Environment variables configuration**.
 9. Set **Name** to: **STRESS_ARGS**
 10. Set **Value** to: 
     ```text
